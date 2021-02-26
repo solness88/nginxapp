@@ -1,6 +1,8 @@
 class NginxappSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
+  require 'types/mutation_type'
+
 
   # Union and Interface Resolution
   def self.resolve_type(abstract_type, obj, ctx)

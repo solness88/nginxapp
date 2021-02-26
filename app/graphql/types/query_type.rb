@@ -13,5 +13,11 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :blog, !Types::BlogType do
+      resolve ->(_obj, _args, ctx){
+        ctx[:blog]
+      }
+    end
   end
 end
